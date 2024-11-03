@@ -4,6 +4,10 @@
     <title>Leaf & Whisk Matcha</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="./css/w3.css" />
     <style>
       body {
@@ -26,6 +30,11 @@
         color: #457016;
         cursor: pointer;
       }
+
+      .my-scrolling {
+        height: 300px;
+        overflow: auto;
+      }
     </style>
   </head>
   <body>
@@ -35,7 +44,18 @@
         class="w3-bar w3-my-forest-green w3-padding w3-card"
         style="letter-spacing: 4px"
       >
-        <a href="#home" class="w3-bar-item w3-button w3-text-sand"
+        <div>
+          <a class="w3-padding-large w3-hide-small w3-right"
+            ><i class="fa fa-search w3-text-my-light-beige"></i
+          ></a>
+          <a class="w3-padding-large w3-hide-small w3-right"
+            ><i class="fa fa-user-circle-o w3-text-my-light-beige"></i
+          ></a>
+          <a class="w3-padding-large w3-hide-small w3-right"
+            ><i class="fa fa-shopping-cart w3-text-my-light-beige"></i
+          ></a>
+        </div>
+        <a href="#home" class="w3-bar-item w3-button w3-text-my-light-beige"
           >LEAF & WHISK MATCHA</a
         >
         <!-- Right-sided navbar links. Hide them on small screens -->
@@ -46,8 +66,59 @@
           <a href="#tools" class="w3-bar-item w3-button">TOOLS</a>
           <a href="#cafe" class="w3-bar-item w3-button">CAFE</a>
         </div>
+
+        <a
+          href="javascript:void(0)"
+          class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+          onclick="w3_open()"
+        >
+          <i class="fa fa-bars w3-text-white"></i>
+        </a>
       </div>
     </div>
+
+    <nav
+      class="w3-sidebar w3-bar-block w3-my-forest-green w3-card w3-animate-left w3-hide-medium w3-hide-large"
+      style="display: none"
+      id="mySidebar"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-large w3-padding-16 w3-text-my-light-beige"
+        >CLOSE &times;</a
+      >
+      <a
+        href="#aboutus"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-text-white"
+        >ABOUT US</a
+      >
+      <a
+        href="#products"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-text-white"
+        >PRODUCTS</a
+      >
+      <a
+        href="#howto"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-text-white"
+        >HOW-TO</a
+      >
+      <a
+        href="#tools"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-text-white"
+        >TOOLS</a
+      >
+      <a
+        href="#cafe"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-text-white"
+        >CAFE</a
+      >
+    </nav>
 
     <!-- Header -->
     <header
@@ -81,6 +152,7 @@
           <p>
             <img
               src="img/fields1.jpg"
+              alt="Tea Fields"
               style="max-height: 200px; float: right; padding-left: 10px"
             />
             At <b>Leaf & Whisk Matcha</b>, we are dedicated to cultivating a
@@ -143,43 +215,46 @@
       <hr />
 
       <!-- Products Section -->
-      <div class="w3-container w3-padding-64" id="products">
+      <div class="w3-container w3 w3-padding-64" id="products">
         <h1 class="w3-center">PRODUCTS</h1>
-        <h4>GENMAICHA</h4>
-        <p>
-          Embrace the comforting blend of Genmaicha Green Tea, a delightful
-          combination of Sencha and roasted brown rice. This unique tea offers a
-          nutty, toasted flavor that beautifully complements the fresh green tea
-          notes. With its low caffeine content, Genmaicha is perfect for
-          afternoon relaxation or as a warm companion during cooler days.
-        </p>
-        <br />
-        <h4>HOJICHA</h4>
-        <p>
-          Delight in the warm, roasted flavors of Hojicha Green Tea, crafted
-          from roasted green tea leaves. This unique process gives hojicha its
-          distinctive brown color and toasty aroma, resulting in a smooth,
-          low-caffeine beverage that’s gentle on the palate. Perfect for winding
-          down, hojicha is a soothing choice for any time of day.
-        </p>
-        <br />
-        <h4>MATCHA POWDER</h4>
-        <p>
-          Experience the ancient tradition of Matcha Green Tea, a finely ground
-          powder made from shade-grown tea leaves. Rich in antioxidants, this
-          ceremonial-grade matcha delivers a creamy, frothy texture with a deep,
-          rich flavor profile. Ideal for whisking into lattes or smoothies.
-        </p>
-        <br />
-        <h4>SENCHA</h4>
-        <p>
-          Discover the refreshing essence of Sencha Green Tea, Japan's most
-          popular green tea. Hand-picked from the lush hills of Shizuoka, this
-          tea offers a vibrant green color and a delightful balance of sweetness
-          and umami. With a smooth, grassy flavor and a hint of astringency,
-          Sencha is perfect for everyday enjoyment, invigorating your senses
-          with every sip.
-        </p>
+        <div class="my-scrolling">
+          <h4>GENMAICHA</h4>
+          <p>
+            Embrace the comforting blend of Genmaicha Green Tea, a delightful
+            combination of Sencha and roasted brown rice. This unique tea offers
+            a nutty, toasted flavor that beautifully complements the fresh green
+            tea notes. With its low caffeine content, Genmaicha is perfect for
+            afternoon relaxation or as a warm companion during cooler days.
+          </p>
+          <br />
+          <h4>HOJICHA</h4>
+          <p>
+            Delight in the warm, roasted flavors of Hojicha Green Tea, crafted
+            from roasted green tea leaves. This unique process gives hojicha its
+            distinctive brown color and toasty aroma, resulting in a smooth,
+            low-caffeine beverage that’s gentle on the palate. Perfect for
+            winding down, hojicha is a soothing choice for any time of day.
+          </p>
+          <br />
+          <h4>MATCHA POWDER</h4>
+          <p>
+            Experience the ancient tradition of Matcha Green Tea, a finely
+            ground powder made from shade-grown tea leaves. Rich in
+            antioxidants, this ceremonial-grade matcha delivers a creamy, frothy
+            texture with a deep, rich flavor profile. Ideal for whisking into
+            lattes or smoothies.
+          </p>
+          <br />
+          <h4>SENCHA</h4>
+          <p>
+            Discover the refreshing essence of Sencha Green Tea, Japan's most
+            popular green tea. Hand-picked from the lush hills of Shizuoka, this
+            tea offers a vibrant green color and a delightful balance of
+            sweetness and umami. With a smooth, grassy flavor and a hint of
+            astringency, Sencha is perfect for everyday enjoyment, invigorating
+            your senses with every sip.
+          </p>
+        </div>
       </div>
 
       <!--How-To Section-->
@@ -204,12 +279,14 @@
 
       <!--Cafe Section-->
       <div class="w3-container w3-padding-64" id="cafe">
-        <h1>COMING SOON</h1>
-        <h3>SUMMER 2025</h3>
-        <p>
-          ENJOY A CURATED COLLECTION OF DRINKS AND CONFECTIONARIES AT OUR FIRST
-          CAFE LOCATION
-        </p>
+        <div class="w3-container w3-third">
+          <h1>COMING SOON</h1>
+          <h3>SUMMER 2025</h3>
+          <p>
+            ENJOY A CURATED COLLECTION OF DRINKS AND CONFECTIONARIES AT OUR
+            FIRST CAFE LOCATION
+          </p>
+        </div>
       </div>
 
       <!-- End page content -->
@@ -233,5 +310,20 @@
         >
       </p>
     </footer>
+    <script>
+      var mySidebar = document.getElementById("mySidebar");
+
+      function w3_open() {
+        if (mySidebar.style.display === "block") {
+          mySidebar.style.display = "none";
+        } else {
+          mySidebar.style.display = "block";
+        }
+      }
+
+      function w3_close() {
+        mySidebar.style.display = "none";
+      }
+    </script>
   </body>
 </html>
