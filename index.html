@@ -8,6 +8,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script
+      type="text/JavaScript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/JavaScript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"
+    ></script>
     <link rel="stylesheet" href="./css/w3.css" />
     <style>
       body {
@@ -34,6 +42,12 @@
       .my-scrolling {
         height: 300px;
         overflow: auto;
+      }
+
+      .mySlides {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 35%;
       }
     </style>
   </head>
@@ -133,10 +147,10 @@
         width="1600"
         height="800"
       />
-      <div class="w3-display-center w3-padding-large">
+      <div class="my-display-bottom-one-third-middle w3-padding-large">
         <a
           href="#products"
-          class="w3-button w3-round-xxlarge w3-my-forest-green w3-text-sand"
+          class="w3-button w3-round-xxlarge w3-my-green w3-text-sand"
           >EXPLORE OUR PRODUCTS</a
         >
       </div>
@@ -187,6 +201,7 @@
           <p>
             <img
               src="img/fields2.webp"
+              alt="Tea Fields Closeup"
               style="max-width: 250px; float: left; padding-right: 10px"
             />
             Sustainability is at the heart of everything we do. We've proudly
@@ -255,6 +270,56 @@
             your senses with every sip.
           </p>
         </div>
+        <div>
+          <img class="mySlides" src="img/Genmaicha.png" style="width: 100%" />
+          <img
+            class="mySlides"
+            src="img/Hojicha.png"
+            style="width: 100%; display: none"
+          />
+          <img
+            class="mySlides"
+            src="img/Matcha powder small.png"
+            style="width: 100%; display: none"
+          />
+          <img
+            class="mySlides"
+            src="img/Sencha.png"
+            style="width: 100%; display: none"
+          />
+        </div>
+        <div class="w3-col s3">
+          <img
+            class="demo w3-opacity w3-hover-opacity-off"
+            src="img/Genmaicha.png"
+            style="width: 70%; cursor: pointer"
+            onclick="currentDiv(1)"
+          />
+        </div>
+        <div class="w3-col s3">
+          <img
+            class="demo w3-opacity w3-hover-opacity-off"
+            src="img/Hojicha.png"
+            style="width: 70%; cursor: pointer"
+            onclick="currentDiv(2)"
+          />
+        </div>
+        <div class="w3-col s3">
+          <img
+            class="demo w3-opacity w3-hover-opacity-off"
+            src="img/Matcha powder small.png"
+            style="width: 70%; cursor: pointer"
+            onclick="currentDiv(3)"
+          />
+        </div>
+        <div class="w3-col s3">
+          <img
+            class="demo w3-opacity w3-hover-opacity-off"
+            src="img/Sencha.png"
+            style="width: 70%; cursor: pointer"
+            onclick="currentDiv(4)"
+          />
+        </div>
       </div>
 
       <!--How-To Section-->
@@ -275,11 +340,57 @@
       <!--Tools Section-->
       <div class="w3-container w3-padding-64" id="tools">
         <h1 class="w3-center">TOOLS</h1>
+        <p class="w3-center w3-text-my-green">
+          The fundamental basics of ceremonial matcha involve four traditional
+          tools. While preparation techniques have evolved to certain
+          preferences, these items are the minimum needed to enhance matcha to
+          its fullest.
+        </p>
+        <div class="w3-padding-large">
+          <table id="myTable" class="w3-table-all w3-centered">
+            <thead>
+              <tr class="w3-my-lime-green">
+                <th>ITEM</th>
+                <th>NAME</th>
+                <th>USE</th>
+                <th>MATERIAL</th>
+              </tr>
+            </thead>
+            <tr class="w3-hover-my-light-beige">
+              <td><img src="img/chasen.png" style="width: 120px" /></td>
+              <td>Chasen (whisk)</td>
+              <td>creating froth</td>
+              <td>bamboo (traditional) or resin</td>
+            </tr>
+            <tr class="w3-hover-my-light-beige">
+              <td><img src="img/chashaku.webp" style="width: 120px" /></td>
+              <td>Chashaku (tea scoop)</td>
+              <td>measuring and scooping powder into the chawan</td>
+              <td>bamboo</td>
+            </tr>
+            <tr class="w3-hover-my-light-beige">
+              <td>
+                <img src="img/chawan.png" style="width: 120px" />
+              </td>
+              <td>Chawan (tea bowl)</td>
+              <td>preparation and whisking</td>
+              <td>various</td>
+            </tr>
+            <tr class="w3-hover-my-light-beige">
+              <td>
+                <img src="img/sifter.webp" style="width: 120px" />
+              </td>
+              <td>Sifter</td>
+              <td>removing clumps before whisking</td>
+              <td>stainless steel</td>
+            </tr>
+          </table>
+        </div>
       </div>
 
       <!--Cafe Section-->
       <div class="w3-container w3-padding-64" id="cafe">
-        <div class="w3-container w3-third">
+        <div class="w3-display-container w3-third">
           <h1>COMING SOON</h1>
           <h3>SUMMER 2025</h3>
           <p>
@@ -287,28 +398,179 @@
             FIRST CAFE LOCATION
           </p>
         </div>
+        <div class="w3-display-container w3-twothird">
+          <div class="w3-col s4">
+            <img
+              src="img/warabimochi_square.png"
+              style="width: 70%; cursor: zoom-in"
+              onclick="document.getElementById('modal01').style.display='block'"
+              class="w3-hover-shadow"
+            />
+          </div>
+          <div class="w3-col s4">
+            <img
+              src="img/matcha latte_square.png"
+              style="width: 70%; cursor: zoom-in"
+              onclick="document.getElementById('modal02').style.display='block'"
+              class="w3-hover-shadow"
+            />
+          </div>
+          <div class="w3-col s4">
+            <img
+              src="img/matcha crepe cake_square.png"
+              style="width: 70%; cursor: zoom-in"
+              onclick="document.getElementById('modal03').style.display='block'"
+              class="w3-hover-shadow"
+            />
+          </div>
+          <div class="w3-row-padding" style="margin: 15px 0px"></div>
+          <div class="w3-col s4">
+            <img
+              src="img/matcha cafe 1.png"
+              style="width: 70%; cursor: zoom-in"
+              onclick="document.getElementById('modal04').style.display='block'"
+              class="w3-hover-shadow"
+            />
+          </div>
+          <div class="w3-col s4">
+            <img
+              src="img/matcha cafe 2.png"
+              style="width: 70%; cursor: zoom-in"
+              onclick="document.getElementById('modal05').style.display='block'"
+              class="w3-hover-shadow"
+            />
+          </div>
+          <div class="w3-col s4">
+            <img
+              src="img/matcha cafe 3.png"
+              style="width: 70%; cursor: zoom-in"
+              onclick="document.getElementById('modal06').style.display='block'"
+              class="w3-hover-shadow"
+            />
+          </div>
+          <div
+            id="modal01"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+            <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <div class="w3-modal-content w3-animate-zoom">
+              <img src="img/warabimochi_square.png" style="width: 100%" />
+            </div>
+          </div>
+
+          <div
+            id="modal02"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+            <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <div class="w3-modal-content w3-animate-zoom">
+              <img src="img/matcha latte_square.png" style="width: 100%" />
+            </div>
+          </div>
+
+          <div
+            id="modal03"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+            <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <div class="w3-modal-content w3-animate-zoom">
+              <img src="img/matcha crepe cake_square.png" style="width: 100%" />
+            </div>
+          </div>
+
+          <div
+            id="modal04"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+            <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <div class="w3-modal-content w3-animate-zoom">
+              <img src="img/matcha cafe 1.png" style="width: 100%" />
+            </div>
+          </div>
+
+          <div
+            id="modal05"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+            <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <div class="w3-modal-content w3-animate-zoom">
+              <img src="img/matcha cafe 2.png" style="width: 100%" />
+            </div>
+          </div>
+
+          <div
+            id="modal06"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+            <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <div class="w3-modal-content w3-animate-zoom">
+              <img src="img/matcha cafe 3.png" style="width: 100%" />
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- End page content -->
     </div>
 
     <!-- Footer -->
-    <footer class="w3-center w3-my-lime-green w3-padding-32">
-      <img
-        src="img/B-Corp-Logo-White-RGB.png"
-        alt="B Corp Logo"
-        style="max-width: 40px; float: left; padding-left: 5px"
-      />
-      <p>
-        Powered by
+    <footer class="w3-container w3-my-lime-green w3-padding-32">
+      <div>
+        <img src="img/B-Corp-Logo-White-RGB.png" alt="B Corp Logo"
+        style="max-width: 40px; w3-left>
+      </div>
+      <div class="w3-section w3-center">
         <a
-          href="https://www.w3schools.com/w3css/default.asp"
-          title="W3.CSS"
+          class="fa fa-twitter w3-hover-opacity w3-text-white"
+          href="https://twitter.com/"
           target="_blank"
-          class="w3-hover-text-green"
-          >w3.css</a
-        >
-      </p>
+        ></a>
+        <a
+          class="fa fa-instagram w3-hover-opacity w3-text-white"
+          href="https://www.instagram.com/"
+          target="_blank"
+        ></a>
+        <a
+          class="fa fa-facebook-official w3-hover-opacity w3-text-white"
+          href="https://www.facebook.com/"
+          target="_blank"
+        ></a>
+        <a
+          class="fa fa-youtube-play w3-hover-opacity w3-text-white"
+          href="https://www.youtube.com/"
+          target="_blank"
+        ></a>
+      </div>
     </footer>
     <script>
       var mySidebar = document.getElementById("mySidebar");
@@ -324,6 +586,38 @@
       function w3_close() {
         mySidebar.style.display = "none";
       }
+
+      var myIndex = 0;
+      carousel();
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 4000); // Change image every 2 seconds
+      }
+
+      // slideshow - carousel
+      function currentDiv(n) {
+        showDivs((slideIndex = n));
+        myIndex = n;
+      }
+
+      $(document).ready(function () {
+        $("table#myTable").tablesorter({
+          sortList: [
+            [2, 1],
+          ] /* 1st number - column to sort, 2nd number - asending (2) or descending order (1) */,
+          CssAsc: "tablesorter-headerAsc",
+          CssDesc: "tablesorter-headerDesc",
+        });
+      });
     </script>
   </body>
 </html>
