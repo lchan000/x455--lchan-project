@@ -17,20 +17,32 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"
     ></script>
     <link rel="stylesheet" href="./css/w3.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/cqf6acm.css" />
     <style>
       body {
-        font-family: "Segoe UI", Georgia, Serif;
+        font-family: "Segoe UI";
       }
       h1 {
+        font-family: "Mokoko", "Segoe UI";
+        font-weight: bold;
         color: #112e28;
       }
       h2,
-      h3,
-      h4,
+      h3 {
+        font-family: "Mokoko", "Segoe UI";
+      }
+      h4 {
+        font-family: "Segoe UI";
+        font-weight: 600;
+      }
       h5,
       h6 {
         font-family: "Segoe UI";
         letter-spacing: 5px;
+      }
+
+      .w3-finalsix {
+        font-family: "finalsix", Sans-serif;
       }
 
       a {
@@ -51,8 +63,10 @@
       }
 
       #accordionBtn1:hover,
-      #accordionBtn2:hover {
-        background-color: #f3e6c4 !important;
+      #accordionBtn2:hover,
+      #accordionBtn3:hover,
+      #accordianBtn4:hover {
+        background-color: #a9bc60 !important;
       }
     </style>
   </head>
@@ -74,7 +88,9 @@
             ><i class="fa fa-shopping-cart w3-text-my-light-beige"></i
           ></a>
         </div>
-        <a href="#home" class="w3-bar-item w3-button w3-text-my-light-beige"
+        <a
+          href="#home"
+          class="w3-bar-item w3-button w3-text-my-light-beige w3-finalsix w3-large"
           >LEAF & WHISK MATCHA</a
         >
         <!-- Right-sided navbar links. Hide them on small screens -->
@@ -155,7 +171,7 @@
       <div class="my-display-bottom-one-third-middle w3-padding-large">
         <a
           href="#products"
-          class="w3-button w3-round-xxlarge w3-my-green w3-text-sand"
+          class="w3-button w3-round-xxlarge w3-my-green w3-text-sand w3-finalsix"
           >EXPLORE OUR PRODUCTS</a
         >
       </div>
@@ -327,6 +343,8 @@
         </div>
       </div>
 
+      <hr />
+
       <!--How-To Section-->
       <div class="w3-container w3-padding-64" id="howto">
         <h1 class="w3-center">MAKE THE PERFECT MATCHA</h1>
@@ -341,41 +359,174 @@
           amount of powder to your taste preference.
         </p>
         <br />
-        <div class="w3-row">
-          <div class="w3-col w3-left" style="padding-right: 3px">
+        <!--Accordian 1-->
+        <div>
+          <button
+            onclick="myAccordion('accordion1')"
+            class="w3-button w3-block my-w3-border w3-center w3-round-large"
+            id="accordionBtn1"
+          >
+            <h6>
+              What are the health benefits of matcha?
+              <i class="fa fa-caret-down"></i>
+            </h6>
+          </button>
+          <div
+            id="accordion1"
+            class="w3-hide w3-container"
+            style="height: 260px"
+          >
+            <div class="w3-col s9 w3-left" style="padding-right: 3px">
+              <p>
+                Matcha offers a range of health benefits due to its rich
+                nutrient profile. It's packed with antioxidants, particularly
+                catechins, which help neutralize harmful free radicals in the
+                body. The high levels of L-theanine in matcha promote a state of
+                calm focus, balancing the stimulating effects of caffeine,
+                making it a great choice for sustained energy without the
+                jitters. Additionally, matcha has been linked to improved
+                metabolism and fat oxidation. It also supports cardiovascular
+                health by helping to lower cholesterol levels and blood
+                pressure. With its potential to enhance cognitive function,
+                boost immunity, and provide a gentle detox, matcha is a holistic
+                and energizing beverage choice.
+              </p>
+            </div>
+            <div class="w3-col s3 w3-right w3-padding-16">
+              <iframe
+                width="250"
+                height="215"
+                src="https://www.youtube.com/embed/R1H-FdkKVjw?si=cL69H_PdPRA1CI9u"
+                title="Health Benefits"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+              ></iframe>
+            </div>
+          </div>
+          <br />
+
+          <!--Accordian 2-->
+          <div>
             <button
-              onclick="myAccordion('accordion1')"
+              onclick="myAccordion('accordion2')"
               class="w3-button w3-block my-w3-border w3-center w3-round-large"
-              id="accordionBtn1"
+              id="accordionBtn2"
             >
               <h6>
-                What are the health benefits of matcha?
+                Do I have to use a whisk?
                 <i class="fa fa-caret-down"></i>
               </h6>
             </button>
-            <!-- add accordion content here -->
             <div
-              id="accordion1"
+              id="accordion2"
               class="w3-hide w3-container"
               style="height: 260px"
             >
-              <p>
-                offers a range of health benefits due to its rich nutrient
-                profile. It is packed with antioxidants, particularly catechins,
-                which help neutralize harmful free radicals in the body. The
-                high levels of L-theanine in matcha promote a state of calm
-                focus, balancing the stimulating effects of caffeine, making it
-                a great choice for sustained energy without the jitters.
-                Additionally, matcha has been linked to improved metabolism and
-                fat oxidation, which can support weight management. It also
-                supports cardiovascular health by helping to lower cholesterol
-                levels and blood pressure. With its potential to enhance
-                cognitive function, boost immunity, and provide a gentle detox,
-                matcha is a holistic and energizing beverage choice.
-              </p>
+              <div class="w3-col s9 w3-left" style="padding-right: 3px">
+                <p>
+                  Using a bamboo whisk is highly recommended for the best
+                  tasting, frothiest matcha. But it’s not absolutely necessary.
+                  Many people choose electronic frothers for their time-saving
+                  convenience. Here’s a video on alternative ways of whisking
+                  your matcha.
+                </p>
+              </div>
+              <div class="w3-col s3 w3-right w3-padding-16">
+                <iframe
+                  width="250"
+                  height="215"
+                  src="https://www.youtube.com/embed/b1I94kdpcew?si=2Z4O44NrifJwocTK"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="autoplay; encrypted-media"
+                ></iframe>
+              </div>
+            </div>
+            <br />
+
+            <!--Accordian 3-->
+            <div>
+              <button
+                onclick="myAccordion('accordion3')"
+                class="w3-button w3-block my-w3-border w3-center w3-round-large"
+                id="accordionBtn3"
+              >
+                <h6>
+                  How do I store my matcha?
+                  <i class="fa fa-caret-down"></i>
+                </h6>
+              </button>
+              <div
+                id="accordion3"
+                class="w3-hide w3-container"
+                style="height: 260px"
+              >
+                <p>
+                  To preserve the freshness and potency of matcha, proper
+                  storage is key. Here are some tips on how to store matcha
+                  effectively: Keep it airtight: Store matcha in an airtight
+                  container to protect it from air exposure, which can degrade
+                  its flavor and nutrients. A sealed tin or jar works best.
+                  Avoid light and heat: Matcha is sensitive to light and heat,
+                  which can cause it to lose its vibrant green color and
+                  antioxidants. Store it in a cool, dark place, away from direct
+                  sunlight or heat sources like stoves and ovens. Refrigeration
+                  (optional): While not strictly necessary, storing matcha in
+                  the refrigerator can help extend its freshness, especially if
+                  you live in a warm climate. Just be sure it's sealed tightly
+                  to prevent moisture from affecting the powder. Use it
+                  promptly: Matcha is best consumed within a few weeks to a
+                  couple of months after opening. Over time, it will lose its
+                  freshness, so try to use it quickly for the best flavor and
+                  nutritional benefits. By keeping matcha in a cool, dark, and
+                  airtight container, you can maintain its vibrant color, fresh
+                  flavor, and maximum health benefits.
+                </p>
+              </div>
+              <br />
+
+              <!--Accordian 4-->
+              <div>
+                <button
+                  onclick="myAccordion('accordion4')"
+                  class="w3-button w3-block my-w3-border w3-center w3-round-large"
+                  id="accordionBtn3"
+                >
+                  <h6>
+                    How can I use matcha in baking?
+                    <i class="fa fa-caret-down"></i>
+                  </h6>
+                </button>
+                <div
+                  id="accordion4"
+                  class="w3-hide w3-container"
+                  style="height: 260px"
+                >
+                  <div class="w3-col s9 w3-left" style="padding-right: 3px">
+                    <p>
+                      Matcha can add a unique flavor and vibrant green color to
+                      baked goods, making it a popular ingredient in everything
+                      from cakes to cookies. Here are some ways you can use
+                      matcha in baking.
+                    </p>
+                  </div>
+                  <div class="w3-col s3 w3-right w3-padding-16">
+                    <iframe
+                      width="250"
+                      height="215"
+                      src="https://www.youtube.com/embed/Um_Suigs_54?si=j4GdIoDkSMf7eIJk"
+                      title="Matcha Desserts"
+                      frameborder="0"
+                      allow="autoplay; encrypted-media"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <hr />
 
         <!--Tools Section-->
         <div class="w3-container w3-padding-64" id="tools">
@@ -428,9 +579,11 @@
           </div>
         </div>
 
+        <hr />
+
         <!--Cafe Section-->
         <div class="w3-container w3-padding-64" id="cafe">
-          <div class="w3-left w3-third">
+          <div class="w3-left w3-third w3-padding">
             <h1>COMING SOON</h1>
             <h3>SUMMER 2025</h3>
             <p>
@@ -597,7 +750,7 @@
               class="w3-left w3-margin-right"
               style="width: 50px"
             />
-            <span class="w3-large">LEAF & WHISK MATCHA</span><br />
+            <span class="w3-large w3-finalsix">LEAF & WHISK MATCHA</span><br />
             <span>INFO@LEAFANDWHISK.COM</span><br />
             <span>123-456-7890</span>
           </li>
